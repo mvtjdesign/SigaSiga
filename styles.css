@@ -1,0 +1,111 @@
+/* Reset & Base */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Custom Classes */
+.font-serif { font-family: 'Cormorant Garamond', serif; }
+.font-sans { font-family: 'Inter', sans-serif; }
+
+/* Micro-Textures (Subtle Premium Layering) */
+.texture-grain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.texture-plaster {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.015;
+    background-image: 
+        linear-gradient(to right, #1A2B3C 1px, transparent 1px),
+        linear-gradient(to bottom, #1A2B3C 1px, transparent 1px);
+    background-size: 3px 3px;
+}
+
+/* Hero Lighting Effect */
+.golden-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 80% 15%, rgba(255, 225, 160, 0.22) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 0;
+    transition: transform 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Navigation Links */
+.nav-link {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    opacity: 0.35;
+    transition: all 0.7s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: #1A2B3C;
+    transition: width 0.7s ease;
+}
+
+.nav-link:hover {
+    opacity: 1;
+    letter-spacing: 0.45em;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Reveal Animation System */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all 1.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Smooth Scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-track {
+    background: #F5F2ED;
+}
+::-webkit-scrollbar-thumb {
+    background: #1A2B3C;
+    border-radius: 0;
+}
+
+/* Mobile Tweaks */
+@media (max-width: 640px) {
+    .reveal {
+        transition-duration: 1s;
+    }
+}
