@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siga Siga | Slow is steady.</title>
+    <meta name="description" content="A Mediterranean philosophy of slow living. sigasiga.online">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0"
+  }
+}
+</script>
+</head>
+<body class="bg-[#F5F2ED] text-[#1A2B3C] font-sans selection:bg-[#1A2B3C]/10 overflow-x-hidden">
+
+    <!-- Texture Layers -->
+    <div class="texture-grain"></div>
+    <div class="texture-plaster"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 px-8 py-10 md:px-16 flex justify-between items-center transition-all duration-1000" id="navbar">
+        <a href="#" class="font-serif text-2xl tracking-[0.2em] uppercase transition-opacity hover:opacity-60">Siga Siga</a>
+        <div class="hidden md:flex space-x-12">
+            <a href="#philosophy" class="nav-link">Philosophy</a>
+            <a href="#collections" class="nav-link">Collections</a>
+            <a href="#contact" class="nav-link">Stay close</a>
+        </div>
+        <button class="md:hidden opacity-60">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line></svg>
+        </button>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+        <div class="golden-glow" id="hero-glow"></div>
+        
+        <div class="relative z-10 space-y-12 reveal">
+            <div class="space-y-4">
+                <p class="font-serif italic text-2xl md:text-4xl opacity-90 leading-relaxed max-w-2xl mx-auto">
+                    Slow is steady. Steady is fast.<br>
+                    Siga Siga.
+                </p>
+            </div>
+            <div class="pt-8">
+                <div class="w-px h-16 bg-[#1A2B3C] opacity-10 mx-auto mb-10"></div>
+                <p class="text-[10px] uppercase tracking-[0.65em] opacity-40">A Mediterranean philosophy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Teaser Section -->
+    <section id="philosophy" class="py-40 md:py-64 px-8 md:px-32 flex justify-center text-center border-y border-[#1A2B3C]/5">
+        <div class="max-w-2xl reveal">
+            <h2 class="font-serif text-3xl md:text-5xl italic font-light leading-relaxed">
+                “A way of doing things.”
+            </h2>
+            <p class="mt-14 text-sm md:text-base opacity-50 leading-loose tracking-wide max-w-lg mx-auto font-light">
+                Intention over velocity. We curate moments that require your full presence. Not a race, but a rhythmic assembly of quality.
+            </p>
+        </div>
+    </section>
+
+    <!-- 3. Three Principles -->
+    <section class="py-40 px-8 md:px-16 grid grid-cols-1 md:grid-cols-3 gap-24 md:gap-12 max-w-[1300px] mx-auto">
+        <div class="reveal">
+            <span class="text-[10px] uppercase tracking-[0.4em] opacity-30 mb-8 block">01 — Pace</span>
+            <h3 class="font-serif text-2xl italic mb-6">Measured</h3>
+            <p class="text-sm opacity-50 leading-relaxed font-light">Allowing the process to dictate the timeline. We believe the best results are born in the absence of urgency.</p>
+        </div>
+        <div class="reveal" style="transition-delay: 200ms;">
+            <span class="text-[10px] uppercase tracking-[0.4em] opacity-30 mb-8 block">02 — Craft</span>
+            <h3 class="font-serif text-2xl italic mb-6">Honest</h3>
+            <p class="text-sm opacity-50 leading-relaxed font-light">Materials sourced with respect. Construction handled with patience. Every detail serves a singular purpose.</p>
+        </div>
+        <div class="reveal" style="transition-delay: 400ms;">
+            <span class="text-[10px] uppercase tracking-[0.4em] opacity-30 mb-8 block">03 — Clarity</span>
+            <h3 class="font-serif text-2xl italic mb-6">Distilled</h3>
+            <p class="text-sm opacity-50 leading-relaxed font-light">Stripping away the superfluous. What remains is essential, functional, and inherently beautiful.</p>
+        </div>
+    </section>
+
+    <!-- 4. Collections Tiles -->
+    <section id="collections" class="pb-40 px-8 md:px-16 max-w-[1600px] mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- Cartridges -->
+            <div class="group relative aspect-[4/5] overflow-hidden bg-[#EAE5DC] reveal">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#1A2B3C]/5 z-0"></div>
+                <div class="absolute inset-0 flex flex-col justify-end p-12 z-10">
+                    <h4 class="font-serif text-3xl italic mb-6">Cartridges</h4>
+                    <a href="#" class="text-[9px] uppercase tracking-[0.4em] opacity-40 hover:opacity-100 transition-opacity flex items-center group">
+                        Explore <span class="ml-4 h-px w-6 bg-[#1A2B3C] opacity-20 group-hover:w-10 transition-all"></span>
+                    </a>
+                </div>
+            </div>
+            <!-- Topicals -->
+            <div class="group relative aspect-[4/5] overflow-hidden bg-[#DED9CE] reveal" style="transition-delay: 150ms;">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#556B2F]/5 z-0"></div>
+                <div class="absolute inset-0 flex flex-col justify-end p-12 z-10">
+                    <h4 class="font-serif text-3xl italic mb-6">Topicals</h4>
+                    <a href="#" class="text-[9px] uppercase tracking-[0.4em] opacity-40 hover:opacity-100 transition-opacity flex items-center group">
+                        Explore <span class="ml-4 h-px w-6 bg-[#1A2B3C] opacity-20 group-hover:w-10 transition-all"></span>
+                    </a>
+                </div>
+            </div>
+            <!-- Essentials -->
+            <div class="group relative aspect-[4/5] overflow-hidden bg-[#E2DBD0] reveal" style="transition-delay: 300ms;">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#1A2B3C]/5 z-0"></div>
+                <div class="absolute inset-0 flex flex-col justify-end p-12 z-10">
+                    <h4 class="font-serif text-3xl italic mb-6">Essentials</h4>
+                    <a href="#" class="text-[9px] uppercase tracking-[0.4em] opacity-40 hover:opacity-100 transition-opacity flex items-center group">
+                        Explore <span class="ml-4 h-px w-6 bg-[#1A2B3C] opacity-20 group-hover:w-10 transition-all"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Transparency -->
+    <section class="py-48 px-8 text-center bg-[#1A2B3C] text-[#F5F2ED] relative overflow-hidden">
+        <div class="max-w-xl mx-auto reveal relative z-10">
+            <h2 class="font-serif text-4xl italic mb-10">Measured. Documented.</h2>
+            <p class="text-sm opacity-50 leading-relaxed tracking-wide font-light max-w-md mx-auto">
+                Integrity is the bridge between our process and your experience. Every batch is rigorously validated to ensure consistency remains an absolute.
+            </p>
+        </div>
+    </section>
+
+    <!-- 6. Cyprus Note -->
+    <section class="py-56 px-8 flex justify-center text-center">
+        <div class="max-w-2xl reveal">
+            <span class="text-[10px] uppercase tracking-[0.6em] opacity-30 mb-12 block">Origin Note</span>
+            <h2 class="font-serif text-3xl md:text-4xl italic font-light leading-relaxed mb-10">“From Cyprus, in spirit.”</h2>
+            <p class="text-sm opacity-50 leading-relaxed max-w-lg mx-auto font-light">
+                In the Mediterranean, 'siga siga' translates to 'slowly, slowly.' It is a cultural refusal to be hurried. It is the wisdom of the olive tree—growing steady, living long, and yielding only when ready.
+            </p>
+        </div>
+    </section>
+
+    <!-- 7. Email Capture -->
+    <section id="contact" class="py-40 px-8 border-t border-[#1A2B3C]/5">
+        <div class="max-w-md mx-auto text-center reveal">
+            <h2 class="font-serif text-3xl italic mb-12">Stay close.</h2>
+            <form class="flex flex-col space-y-6">
+                <input type="email" placeholder="Your email address" class="bg-transparent border-b border-[#1A2B3C]/10 py-5 px-2 focus:outline-none focus:border-[#1A2B3C] transition-colors font-light text-sm text-center tracking-wider">
+                <button type="submit" class="text-[10px] uppercase tracking-[0.5em] py-5 px-12 bg-[#1A2B3C] text-[#F5F2ED] hover:bg-[#1A2B3C]/90 transition-all self-center">Join</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 8. Footer -->
+    <footer class="pt-24 pb-16 px-8 md:px-16 flex flex-col items-center opacity-40 space-y-16">
+        <div class="flex flex-wrap justify-center gap-12 md:gap-24">
+            <a href="#" class="text-[10px] uppercase tracking-[0.3em] hover:opacity-100 transition-opacity">About</a>
+            <a href="#" class="text-[10px] uppercase tracking-[0.3em] hover:opacity-100 transition-opacity">Standards</a>
+            <a href="#" class="text-[10px] uppercase tracking-[0.3em] hover:opacity-100 transition-opacity">Contact</a>
+        </div>
+        <div class="w-full flex flex-col md:flex-row justify-between items-center pt-16 border-t border-[#1A2B3C]/5 space-y-8 md:space-y-0">
+            <div class="text-[10px] uppercase tracking-[0.2em]">© 2025 sigasiga.online</div>
+            <div class="font-serif italic text-2xl tracking-widest">Siga Siga</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] italic">Slow is steady.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
